@@ -336,7 +336,63 @@
       line-height: 1.6;
     }
 
-    /* FOOTER */
+    /* FAQ */
+    .faq-section {
+      padding: 2.5rem 2rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+    }
+    .faq-heading {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+    .faq-sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 1.5rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1rem 0;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-question:hover { color: var(--green); }
+    .faq-icon {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-answer {
+      display: none;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      padding-bottom: 1rem;
+    }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--green); }
+
+    /* FAQ */
     hr { border: none; border-top: 1px solid var(--border-light); }
     footer {
       padding: 1.5rem 2rem;
@@ -346,6 +402,69 @@
       font-weight: 500;
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Smedium Consulting",
+    "url": "https://smediumconsulting.com",
+    "email": "nathan@smediumconsulting.com",
+    "description": "Business automation consulting for small and mid-sized businesses. We audit operations and build roadmaps to standardize, document and automate workflows using AI and modern tools.",
+    "serviceType": "Business Consulting",
+    "areaServed": "United States",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Consulting Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automation Audit"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Documentation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agent Setup"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Website Development"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business App Development"}}
+      ]
+    },
+    "mainEntityOfPage": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a business automation audit?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A business automation audit is a review of your current workflows, tools, and daily tasks to identify repetitive processes that can be automated. At Smedium Consulting, we deliver a prioritized roadmap of automation opportunities with specific tool recommendations and estimated time and cost savings."}
+        },
+        {
+          "@type": "Question",
+          "name": "How can small businesses use AI?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Small businesses can use AI to automate customer follow-ups, generate reports, answer frequently asked questions via chatbot, summarize meetings, sort job applications, and much more. Smedium Consulting helps small and mid-sized businesses identify and implement the right AI tools for their specific needs."}
+        },
+        {
+          "@type": "Question",
+          "name": "What does Smedium Consulting do?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Smedium Consulting helps small and mid-sized businesses standardize, document, and automate their workflows. We offer automation audits, AI agent setup, custom website development, and business app development — all tailored to businesses your size."}
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a business automation audit cost?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Smedium Consulting offers automation audits starting at $500 for very small businesses, scaling based on team size and complexity. The audit is a flat fee and includes a full workflow map, prioritized automation opportunities, tool recommendations, and an implementation roadmap. Book a free discovery call to get a custom quote."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an automation audit take?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Smedium Consulting typically completes a business automation audit within one week. At the end you receive a clear, actionable roadmap you can begin implementing immediately."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can Smedium Consulting build a website or app for my business?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. In addition to automation consulting, Smedium Consulting builds custom websites, business web apps, client portals, and AI-powered tools tailored specifically to how your business operates."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is an AI agent and does my business need one?",
+          "acceptedAnswer": {"@type": "Answer", "text": "An AI agent is a tool that can perform tasks automatically on your behalf — like answering customer questions, routing leads, or generating reports. Smedium Consulting can set up and train AI agents specifically for your business so your team spends less time on repetitive work."}
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -467,11 +586,82 @@
     </div>
 
     <hr>
+
+    <div class="faq-section">
+      <div class="faq-heading">Common questions</div>
+      <p class="faq-sub">Everything you need to know before booking your free call.</p>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is a business automation audit?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">A business automation audit is a review of your current workflows, tools, and daily tasks to identify repetitive processes that can be automated. At Smedium Consulting, we deliver a prioritized roadmap of automation opportunities with specific tool recommendations and estimated time and cost savings.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How can small businesses use AI?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Small businesses can use AI to automate customer follow-ups, generate reports, answer frequently asked questions via chatbot, summarize meetings, sort job applications, and much more. We help you identify and implement the right AI tools for your specific needs — without the tech overwhelm.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What does Smedium Consulting do?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Smedium Consulting helps small and mid-sized businesses standardize, document, and automate their workflows. We offer automation audits, AI agent setup, custom website development, and business app development — all tailored to businesses your size.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How much does a business automation audit cost?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Automation audits start at $500 for very small businesses and scale based on team size and complexity. The audit is a flat fee and includes a full workflow map, prioritized automation opportunities, tool recommendations, and an implementation roadmap. Book a free discovery call to get a custom quote.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does an automation audit take?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">We typically complete a business automation audit within one week. At the end you receive a clear, actionable roadmap you can begin implementing immediately.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can you build a website or app for my business?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Yes. In addition to automation consulting, we build custom websites, business web apps, client portals, and AI-powered tools tailored specifically to how your business operates.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is an AI agent and does my business need one?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">An AI agent is a tool that can perform tasks automatically on your behalf — like answering customer questions, routing leads, or generating reports. We can set up and train AI agents specifically for your business so your team spends less time on repetitive work.</div>
+      </div>
+
+    </div>
+
+    <hr>
     <footer>Strategy built for your business &nbsp;·&nbsp; Smedium Consulting</footer>
 
   </div>
 
   <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
     const form = document.getElementById('discovery-form');
     const submitBtn = document.getElementById('submit-btn');
 
