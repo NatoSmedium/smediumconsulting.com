@@ -4,39 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smedium Consulting — Strategy Built for Your Business</title>
-  <meta name="description" content="We audit your operations and build a custom roadmap to automate repetitive work — using AI and modern tools built for businesses your size.">
+  <meta name="description" content="We audit your operations and build a custom roadmap to standardize, document and automate your workflows — using AI and modern tools built for businesses your size.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --text-primary: #1a1a18;
-      --text-secondary: #5f5e5a;
-      --text-tertiary: #888780;
+      --text-primary: #111110;
+      --text-secondary: #3d3d3a;
+      --text-tertiary: #6b6a65;
+      --text-on-dark: #ffffff;
+      --text-on-dark-soft: rgba(255,255,255,0.75);
       --bg-primary: #ffffff;
-      --bg-secondary: #f7f6f2;
+      --bg-secondary: #f2f0eb;
+      --bg-dark: #1a1a18;
       --bg-page: #faf9f6;
-      --border-light: rgba(0,0,0,0.1);
-      --border-mid: rgba(0,0,0,0.18);
+      --border-light: rgba(0,0,0,0.12);
+      --border-mid: rgba(0,0,0,0.22);
       --green: #1D9E75;
-      --red: #E24B4A;
+      --red: #C0392B;
       --radius-md: 8px;
-      --radius-lg: 12px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text-primary: #e8e6df;
-        --text-secondary: #a09e97;
-        --text-tertiary: #6b6a65;
-        --bg-primary: #1c1c1a;
-        --bg-secondary: #252522;
-        --bg-page: #161614;
-        --border-light: rgba(255,255,255,0.1);
-        --border-mid: rgba(255,255,255,0.18);
-      }
+      --radius-lg: 14px;
     }
 
     html { scroll-behavior: smooth; }
@@ -52,72 +42,74 @@
     }
 
     .wrapper {
-      max-width: 860px;
+      max-width: 880px;
       margin: 0 auto;
       background: var(--bg-primary);
-      border-left: 0.5px solid var(--border-light);
-      border-right: 0.5px solid var(--border-light);
+      border-left: 1px solid var(--border-light);
+      border-right: 1px solid var(--border-light);
       min-height: 100vh;
     }
 
     /* NAV */
     nav {
       padding: 1.25rem 2rem;
-      border-bottom: 0.5px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: var(--bg-primary);
     }
-    .logo {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
+    .nav-logo {
+      height: 48px;
+      width: auto;
+      display: block;
     }
     .nav-cta {
       font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
+      font-weight: 600;
+      color: var(--bg-primary);
+      background: var(--bg-dark);
       text-decoration: none;
-      border: 0.5px solid var(--border-mid);
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 100px;
-      transition: background 0.15s;
+      transition: opacity 0.15s;
     }
-    .nav-cta:hover { background: var(--bg-secondary); }
+    .nav-cta:hover { opacity: 0.8; }
 
-    /* HERO */
+    /* HERO — dark background for strong contrast */
     .hero {
       padding: 4rem 2rem 3.5rem;
       text-align: center;
-      border-bottom: 0.5px solid var(--border-light);
+      background: var(--bg-dark);
+      color: var(--text-on-dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .eyebrow {
       display: inline-block;
       font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
-      background: var(--bg-secondary);
-      border: 0.5px solid var(--border-light);
+      color: #7effd4;
+      background: rgba(29,158,117,0.18);
+      border: 1px solid rgba(29,158,117,0.35);
       padding: 5px 14px;
       border-radius: 100px;
       margin-bottom: 1.75rem;
     }
     h1 {
       font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(2.1rem, 5vw, 3.1rem);
       font-weight: 400;
       line-height: 1.2;
       max-width: 580px;
       margin: 0 auto 1.25rem;
+      color: var(--text-on-dark);
     }
-    h1 em { font-style: italic; }
+    h1 em { font-style: italic; color: #7effd4; }
     .subhead {
       font-size: 16px;
-      color: var(--text-secondary);
+      color: var(--text-on-dark-soft);
       max-width: 460px;
       margin: 0 auto 2.75rem;
       line-height: 1.75;
@@ -125,19 +117,33 @@
     .stats {
       display: flex;
       justify-content: center;
-      gap: 3rem;
+      gap: 0;
       flex-wrap: wrap;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      max-width: 480px;
+      margin: 0 auto;
     }
+    .stat {
+      flex: 1;
+      padding: 1.1rem 1rem;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      min-width: 120px;
+    }
+    .stat:last-child { border-right: none; }
     .stat-num {
       font-family: 'Instrument Serif', serif;
       font-size: 1.75rem;
       font-weight: 400;
       display: block;
+      color: #7effd4;
     }
     .stat-label {
-      font-size: 12px;
-      color: var(--text-tertiary);
+      font-size: 11px;
+      color: var(--text-on-dark-soft);
       margin-top: 2px;
+      line-height: 1.4;
     }
 
     /* MAIN GRID */
@@ -147,22 +153,29 @@
     }
     @media (max-width: 620px) {
       .main { grid-template-columns: 1fr; }
-      .left { border-right: none; border-bottom: 0.5px solid var(--border-light); }
+      .left { border-right: none; border-bottom: 1px solid var(--border-light); }
+      .stats { max-width: 100%; }
+      .stat { min-width: 90px; }
     }
     .left {
       padding: 2.5rem 2rem;
-      border-right: 0.5px solid var(--border-light);
+      border-right: 1px solid var(--border-light);
+      background: var(--bg-secondary);
     }
-    .right { padding: 2.5rem 2rem; }
+    .right {
+      padding: 2.5rem 2rem;
+      background: var(--bg-primary);
+    }
 
     .section-label {
       font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-tertiary);
       margin-bottom: 1.1rem;
     }
+
     .pain-item {
       display: flex;
       align-items: flex-start;
@@ -171,15 +184,17 @@
       font-size: 14px;
       line-height: 1.55;
       color: var(--text-secondary);
+      font-weight: 500;
     }
     .pain-dot {
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--text-tertiary);
       margin-top: 7px;
       flex-shrink: 0;
     }
+
     .deliver-item {
       display: flex;
       align-items: flex-start;
@@ -187,30 +202,39 @@
       margin-bottom: 0.8rem;
       font-size: 14px;
       line-height: 1.55;
+      color: var(--text-primary);
+      font-weight: 500;
     }
     .check {
-      color: var(--green);
-      font-size: 15px;
-      margin-top: 1px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-size: 11px;
       flex-shrink: 0;
+      margin-top: 2px;
     }
 
     /* FORM */
     .form-card {
-      background: var(--bg-secondary);
-      border: 0.5px solid var(--border-light);
+      background: var(--bg-dark);
       border-radius: var(--radius-lg);
       padding: 1.75rem;
     }
     .form-title {
       font-family: 'Instrument Serif', serif;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 400;
       margin-bottom: 0.35rem;
+      color: var(--text-on-dark);
     }
     .form-sub {
       font-size: 13px;
-      color: var(--text-secondary);
+      color: var(--text-on-dark-soft);
       margin-bottom: 1.5rem;
       line-height: 1.6;
     }
@@ -218,95 +242,108 @@
     .field label {
       display: block;
       font-size: 12px;
-      font-weight: 500;
-      color: var(--text-secondary);
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
       margin-bottom: 5px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
     }
     .field input,
     .field select {
       width: 100%;
-      padding: 9px 12px;
+      padding: 10px 13px;
       font-size: 14px;
       font-family: 'DM Sans', sans-serif;
-      border: 0.5px solid var(--border-mid);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: var(--radius-md);
-      background: var(--bg-primary);
-      color: var(--text-primary);
+      background: rgba(255,255,255,0.07);
+      color: var(--text-on-dark);
       outline: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
+      transition: border-color 0.15s, background 0.15s;
       -webkit-appearance: none;
       appearance: none;
     }
+    .field input::placeholder { color: rgba(255,255,255,0.3); }
+    .field select option { background: #2a2a28; color: white; }
     .field input:focus,
     .field select:focus {
-      border-color: var(--text-primary);
-      box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
+      border-color: #7effd4;
+      background: rgba(255,255,255,0.1);
     }
     .field input.error,
-    .field select.error { border-color: var(--red); }
+    .field select.error { border-color: #ff6b6b; }
 
     .cta-btn {
       width: 100%;
-      padding: 12px;
-      font-size: 14px;
-      font-weight: 500;
+      padding: 13px;
+      font-size: 15px;
+      font-weight: 600;
       font-family: 'DM Sans', sans-serif;
-      background: var(--text-primary);
-      color: var(--bg-primary);
+      background: var(--green);
+      color: #ffffff;
       border: none;
       border-radius: var(--radius-md);
       cursor: pointer;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
       transition: opacity 0.15s, transform 0.1s;
+      letter-spacing: 0.01em;
     }
-    .cta-btn:hover { opacity: 0.85; }
+    .cta-btn:hover { opacity: 0.9; }
     .cta-btn:active { transform: scale(0.99); }
     .cta-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
     .form-note {
       font-size: 11px;
-      color: var(--text-tertiary);
+      color: rgba(255,255,255,0.35);
       text-align: center;
       margin-top: 0.75rem;
     }
     .error-msg {
       font-size: 12px;
-      color: var(--red);
+      color: #ff8a80;
       margin-top: 4px;
       display: none;
+      font-weight: 500;
     }
 
     /* SUCCESS */
     .success-area {
       display: none;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
     }
     .success-icon {
-      font-size: 2.5rem;
-      color: var(--green);
-      margin-bottom: 0.75rem;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
     }
     .success-area h3 {
       font-family: 'Instrument Serif', serif;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 400;
       margin-bottom: 0.5rem;
+      color: var(--text-on-dark);
     }
     .success-area p {
       font-size: 14px;
-      color: var(--text-secondary);
+      color: var(--text-on-dark-soft);
       line-height: 1.6;
     }
 
     /* FOOTER */
-    hr { border: none; border-top: 0.5px solid var(--border-light); }
+    hr { border: none; border-top: 1px solid var(--border-light); }
     footer {
       padding: 1.5rem 2rem;
       text-align: center;
       font-size: 12px;
       color: var(--text-tertiary);
+      font-weight: 500;
     }
   </style>
 </head>
@@ -314,21 +351,21 @@
   <div class="wrapper">
 
     <nav>
-      <span class="logo">Smedium Consulting</span>
+      <img src="logo.png" alt="Smedium Consulting" class="nav-logo">
       <a href="#book" class="nav-cta">Book a free call</a>
     </nav>
 
     <div class="hero">
       <div class="eyebrow">Free 30-Minute Discovery Call</div>
       <h1>Find the hours <em>hiding</em> in your business</h1>
-      <p class="subhead">We audit your operations and build a custom roadmap to automate repetitive work — using AI and modern tools built for businesses your size.</p>
+      <p class="subhead">We audit your operations and build a custom roadmap to standardize, document and automate your workflows — using AI and modern tools built for businesses your size.</p>
       <div class="stats">
         <div class="stat">
           <span class="stat-num">5–10</span>
           <div class="stat-label">hours recovered per week</div>
         </div>
         <div class="stat">
-          <span class="stat-num">2 wks</span>
+          <span class="stat-num">1 wk</span>
           <div class="stat-label">average audit turnaround</div>
         </div>
         <div class="stat">
@@ -337,8 +374,6 @@
         </div>
       </div>
     </div>
-
-    <hr>
 
     <div class="main">
       <div class="left">
@@ -369,7 +404,7 @@
               2. Create a new form and copy your form ID (looks like: xabcdefg)
               3. Replace YOUR_FORM_ID below with your actual form ID
             -->
-            <form id="discovery-form" action="https://formspree.io/f/xojrbepr" method="POST" novalidate>
+            <form id="discovery-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
 
               <div class="field">
                 <label for="name">Your name</label>
@@ -381,6 +416,12 @@
                 <label for="email">Email address</label>
                 <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" autocomplete="email">
                 <div class="error-msg" id="err-email">Please enter a valid email address.</div>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 867-5309" autocomplete="tel">
+                <div class="error-msg" id="err-phone">Please enter a valid phone number.</div>
               </div>
 
               <div class="field">
@@ -402,7 +443,7 @@
               </div>
 
               <div class="field">
-                <label for="pain">Biggest time drain right now</label>
+                <label for="pain">Biggest time drain right now <span style="opacity:0.45; font-weight:400;">(optional)</span></label>
                 <input type="text" id="pain" name="biggest_pain_point" placeholder="e.g. scheduling, reporting, emails...">
               </div>
 
@@ -438,6 +479,11 @@
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
+    function validatePhone(phone) {
+      const digits = phone.replace(/\D/g, '');
+      return digits.length >= 10;
+    }
+
     function setError(fieldId, errId, show) {
       const field = document.getElementById(fieldId);
       const err = document.getElementById(errId);
@@ -454,15 +500,18 @@
       let valid = true;
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
       const business = document.getElementById('business').value.trim();
       const size = document.getElementById('size').value;
 
       setError('name', 'err-name', !name);
       setError('email', 'err-email', !validateEmail(email));
+      setError('phone', 'err-phone', phone && !validatePhone(phone));
       setError('business', 'err-business', !business);
       setError('size', 'err-size', !size);
 
       if (!name || !validateEmail(email) || !business || !size) valid = false;
+      if (phone && !validatePhone(phone)) valid = false;
       return valid;
     }
 
@@ -493,12 +542,12 @@
       }
     });
 
-    ['name', 'email', 'business', 'size'].forEach(id => {
+    ['name', 'email', 'phone', 'business', 'size'].forEach(id => {
       const el = document.getElementById(id);
       el.addEventListener('input', () => {
         el.classList.remove('error');
-        const errMap = { name: 'err-name', email: 'err-email', business: 'err-business', size: 'err-size' };
-        document.getElementById(errMap[id]).style.display = 'none';
+        const errMap = { name: 'err-name', email: 'err-email', phone: 'err-phone', business: 'err-business', size: 'err-size' };
+        if (errMap[id]) document.getElementById(errMap[id]).style.display = 'none';
       });
     });
   </script>
