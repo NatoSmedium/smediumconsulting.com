@@ -8,6 +8,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <!-- Business Schema — helps Google, Siri, Alexa, ChatGPT find and describe Smedium -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Smedium Consulting",
+    "url": "https://smediumconsulting.com",
+    "email": "nathan@smediumconsulting.com",
+    "description": "Smedium Consulting helps small and mid-sized businesses standardize, document, and automate their workflows using AI and modern tools. Services include automation audits, AI agent setup, custom website development, and business app development.",
+    "serviceType": [
+      "Business Automation Consulting",
+      "AI Consulting",
+      "Workflow Automation",
+      "Custom Website Development",
+      "AI Agent Setup"
+    ],
+    "areaServed": "United States",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://smediumconsulting.com"
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema — helps AI and voice search answer questions about Smedium -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a business automation audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A business automation audit is a review of your current workflows, tools, and daily tasks to identify repetitive processes that can be automated. At Smedium Consulting, we deliver a prioritized roadmap of automation opportunities with specific tool recommendations and estimated time and cost savings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can small businesses use AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Small businesses can use AI to automate customer follow-ups, generate reports, answer frequently asked questions via chatbot, summarize meetings, sort job applications, and much more. Smedium Consulting helps you identify and implement the right AI tools for your specific needs without the tech overwhelm."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Smedium Consulting do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smedium Consulting helps small and mid-sized businesses standardize, document, and automate their workflows. Services include automation audits, AI agent setup, custom website development, and business app development — all tailored to businesses your size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a business automation audit cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Automation audits start at $500 for very small businesses and scale based on team size and complexity. The audit is a flat fee and includes a full workflow map, prioritized automation opportunities, tool recommendations, and an implementation roadmap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does an automation audit take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smedium Consulting typically completes a business automation audit within one week. At the end you receive a clear, actionable roadmap you can begin implementing immediately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you build a website or app for my business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In addition to automation consulting, Smedium Consulting builds custom websites, business web apps, client portals, and AI-powered tools tailored specifically to how your business operates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an AI agent and does my business need one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI agent is a tool that can perform tasks automatically on your behalf — like answering customer questions, routing leads, or generating reports. Smedium Consulting can set up and train AI agents specifically for your business so your team spends less time on repetitive work."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -36,8 +126,8 @@
       background: var(--bg-page);
       color: var(--text-primary);
       min-height: 100vh;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -108,7 +198,7 @@
     }
     h1 em { font-style: italic; color: #7effd4; }
     .subhead {
-      font-size: 16px;
+      font-size: 18px;
       color: var(--text-on-dark-soft);
       max-width: 460px;
       margin: 0 auto 2.75rem;
@@ -156,6 +246,23 @@
       .left { border-right: none; border-bottom: 1px solid var(--border-light); }
       .stats { max-width: 100%; }
       .stat { min-width: 90px; }
+      body { font-size: 17px; }
+      h1 { font-size: 2.2rem; }
+      .subhead { font-size: 17px; }
+      .pain-item { font-size: 16px; }
+      .deliver-item { font-size: 16px; }
+      .field label { font-size: 15px; }
+      .field input, .field select { font-size: 16px; padding: 13px; }
+      .cta-btn { font-size: 17px; padding: 15px; }
+      .faq-question { font-size: 16px; }
+      .faq-answer { font-size: 15px; }
+      .section-label { font-size: 13px; }
+      .form-sub { font-size: 16px; }
+      .form-title { font-size: 1.6rem; }
+      nav { padding: 1rem 1.25rem; }
+      .hero { padding: 2.5rem 1.25rem; }
+      .left, .right { padding: 2rem 1.25rem; }
+      .faq-section { padding: 2rem 1.25rem; }
     }
     .left {
       padding: 2.5rem 2rem;
@@ -181,8 +288,8 @@
       align-items: flex-start;
       gap: 10px;
       margin-bottom: 0.9rem;
-      font-size: 14px;
-      line-height: 1.55;
+      font-size: 16px;
+      line-height: 1.6;
       color: var(--text-secondary);
       font-weight: 500;
     }
@@ -200,8 +307,8 @@
       align-items: flex-start;
       gap: 10px;
       margin-bottom: 0.8rem;
-      font-size: 14px;
-      line-height: 1.55;
+      font-size: 16px;
+      line-height: 1.6;
       color: var(--text-primary);
       font-weight: 500;
     }
@@ -233,7 +340,7 @@
       color: var(--text-on-dark);
     }
     .form-sub {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--text-on-dark-soft);
       margin-bottom: 1.5rem;
       line-height: 1.6;
@@ -241,7 +348,7 @@
     .field { margin-bottom: 0.9rem; }
     .field label {
       display: block;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
       color: rgba(255,255,255,0.7);
       margin-bottom: 5px;
@@ -250,8 +357,8 @@
     .field input,
     .field select {
       width: 100%;
-      padding: 10px 13px;
-      font-size: 14px;
+      padding: 11px 13px;
+      font-size: 16px;
       font-family: 'DM Sans', sans-serif;
       border: 1px solid rgba(255,255,255,0.15);
       border-radius: var(--radius-md);
@@ -298,7 +405,7 @@
       margin-top: 0.75rem;
     }
     .error-msg {
-      font-size: 12px;
+      font-size: 13px;
       color: #ff8a80;
       margin-top: 4px;
       display: none;
@@ -444,7 +551,7 @@
         {
           "@type": "Question",
           "name": "How much does a business automation audit cost?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Smedium Consulting offers automation audits starting at $600 for very small businesses, scaling based on team size and complexity. The audit is a flat fee and includes a full workflow map, prioritized automation opportunities, tool recommendations, and an implementation roadmap. Book a free discovery call to get a custom quote."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Smedium Consulting offers automation audits starting at $500 for very small businesses, scaling based on team size and complexity. The audit is a flat fee and includes a full workflow map, prioritized automation opportunities, tool recommendations, and an implementation roadmap. Book a free discovery call to get a custom quote."}
         },
         {
           "@type": "Question",
@@ -523,7 +630,7 @@
               2. Create a new form and copy your form ID (looks like: xabcdefg)
               3. Replace YOUR_FORM_ID below with your actual form ID
             -->
-            <form id="discovery-form" action="https://formspree.io/f/xojrbepr" method="POST" novalidate>
+            <form id="discovery-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
 
               <div class="field">
                 <label for="name">Your name</label>
